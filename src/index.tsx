@@ -6,8 +6,7 @@ import { QueryClientProvider, QueryClient } from "react-query";
 import reportWebVitals from "./reportWebVitals";
 import { AxiosProvider } from "./context/AxiosContext";
 import { BrowserRouter } from "react-router-dom";
-
-import "bootstrap/dist/css/bootstrap.min.css";  
+import { UserContextProvider } from "./context/UserContext";
 
 const queryClient = new QueryClient();
 const root = ReactDOM.createRoot(
@@ -16,11 +15,13 @@ const root = ReactDOM.createRoot(
 root.render(
   <React.StrictMode>
     <QueryClientProvider client={queryClient}>
-      <AxiosProvider>
-        <BrowserRouter>
-          <App />
-        </BrowserRouter>
-      </AxiosProvider>
+      <UserContextProvider>
+        <AxiosProvider>
+          <BrowserRouter>
+            <App />
+          </BrowserRouter>
+        </AxiosProvider>
+      </UserContextProvider>
     </QueryClientProvider>
   </React.StrictMode>
 );

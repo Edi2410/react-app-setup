@@ -7,7 +7,7 @@ export const AxiosProvider = ({
   children,
 }: React.PropsWithChildren<unknown>) => {
   const auth = useMemo(() => {
-    const axios = Axios.create({ baseURL: "https://pokeapi.co/api/v2/" });
+    const axios = Axios.create({ baseURL: "URL" });
 
     axios.interceptors.response.use(
       (response: AxiosResponse) => response,

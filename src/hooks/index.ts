@@ -1,5 +1,6 @@
 import { useAxios } from "./useAxios";
-import { useGetPokemonsList } from "./useGetPokemonsList";
-import { useGetPokemonDetails } from "./useGetPokemonDetails";
+import { useGetAllData } from "./useGetAllData";
+import { useGetDataByID } from "./useGetDataByID";
+import { useUserContext } from "./useUserContext";
 
-export { useAxios, useGetPokemonsList, useGetPokemonDetails };
+export { useAxios, useUserContext, useGetAllData, useGetDataByID };

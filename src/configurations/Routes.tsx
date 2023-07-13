@@ -16,9 +16,9 @@ export const routes: Routes[] = [
     key: "/",
   },
   {
-    path: "/details/:id",
+    path: "/details",
     element: <DetailsPage />,
-    key: "/details/:id",
+    key: "/details",
   },
   {
     path: "/aboutme",
